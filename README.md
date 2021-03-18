@@ -16,7 +16,7 @@ A simple classic password managing tool. Functionalities included:
 
 # INSTALL
 
-* git clone 'YOUR GITHUB LINK'
+* git clone 'https://github.com/jp-mangoit/Password-Manager.git'
 
 * Import the file `database.sql` provided in your mySQL.
 

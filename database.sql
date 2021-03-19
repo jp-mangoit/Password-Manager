@@ -49,8 +49,12 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `users`
 --
+
+INSERT INTO `users` (`email`, `pass`, `token`) VALUES
+('test1@yopmail.com', '$2y$10$M76tBhPFGzTZs13j0BGW.udW7vlQ6.H7JtmAJUs4WwBYUhs0JX/nK', '0'),
+('test12@yopmail.com', '$2y$10$iGLooztWmz5NCGyCUJx7BuXb6ydyCLC9y6521NzFtnSLr0EQjxB02', '0');
 
 --
 -- Indexes for table `passwords`

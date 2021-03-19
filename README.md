@@ -27,3 +27,8 @@ A simple classic password managing tool. Functionalities included:
 * RUN `php -S localhost:8000` in the directory where the project is stored
 
 * Open `http://localhost:8000/login.php` in any browser
+
+# TEST LOGIN
+
+* test1@yopmail.com : any@123456
+* test12@yopmail.com : any123456

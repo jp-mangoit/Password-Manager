@@ -1,10 +1,7 @@
 <?php
 
-	require_once("controllers/db_controller.php");
-
-?>
-
-<?php
+	require_once("controllers/settings_controller.php");
+  	$obj = new settings_controller();
 
 	session_start(); 
 	if(!isset($_SESSION['email'])){
@@ -15,7 +12,7 @@
 		echo "Invalid URL";
 	}
 	else{
-		removepass($_GET['id']);
+		$obj->removepass($_GET['id']);
 		header("Location: dashboard.php");
 	}
 

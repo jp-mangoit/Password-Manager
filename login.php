@@ -5,6 +5,7 @@ require_once 'controllers/login_controller.php';
   	// include("controllers/login_controller.php");
     $obj = new login_controller();
     $db = $obj->login();
+    $form_err = $success = $user_err = $db;
  ?>
 
 <!DOCTYPE html>
@@ -37,17 +38,17 @@ require_once 'controllers/login_controller.php';
   </div>
 
   <div style="margin-top: 10px; text-align: center;">
-	<label style="color: red; font-size: 14px;"><?php if($form_err != ""){ echo "{$form_err}"; } ?></label>	
+	<label style="color: red; font-size: 14px;"><?php if(($form_err != "" ) && ($form_err != "1") && ($form_err != "2")){ echo "{$form_err}"; } ?></label>	
   </div>
 
   <?php
 
-    if($user_err == "1"){
-    	echo "<script type='text/javascript'>alert('Incorrect Password')</script>";
-    }
-    elseif($user_err == "2"){
-      echo "<script type='text/javascript'>alert('User does not exist. Please register and activate your account before logging in.')</script>";
-    }   
+    // if($user_err == "1"){
+    // 	echo "<script type='text/javascript'>alert('Incorrect Password')</script>";
+    // }
+    // elseif($user_err == "2"){
+    //   echo "<script type='text/javascript'>alert('User does not exist')</script>";
+    // }   
 
   ?>
 

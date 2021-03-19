@@ -21,6 +21,7 @@
     $obj = new register_controller();
     $db = $obj->registerUser();
     $form_err = $success = $db;
+    // var_dump($db);
   ?>	
 
   <div class="login-card">
@@ -38,17 +39,17 @@
   </div>
 
   <div style="margin-top: 10px; text-align: center;">
-	<label style="color: red; font-size: 14px;"><?php if($form_err != ""){ echo "{$form_err}"; } ?></label>	
+	<label style="color: red; font-size: 14px;"><?php if(($form_err != "") && ($form_err != "1")){ echo "{$form_err}"; } ?></label>	
   </div>
 
   <?php
 
     if($success == "1") {
-    	echo "<script type='text/javascript'>alert('Registration Successful.'); window.location = '/login.php';</script>";
+    	echo "<script type='text/javascript'>alert('Registration Successful.'); window.location = 'login.php';</script>";
     }   
-    elseif($success == "2"){
-        echo "<script type='text/javascript'>alert('User already exists.')</script>";
-    }
+    // elseif($success == "2"){
+    //     echo "<script type='text/javascript'>alert('User already exists.')</script>";
+    // }
 
   ?>
 
